@@ -1,0 +1,158 @@
+// google webfonts
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;700&family=Poppins&family=Roboto&family=Source+Code+Pro:wght@300;400&display=swap");
+
+
+$font-1: "Baloo Bhai 2", cursive;
+$font-2: "Poppins", sans-serif;
+$font-3: "Roboto", sans-serif;
+$font-4: "Source Code Pro", monospace;
+
+$font-primary: "Baloo Bhai 2", cursive;
+$font-secondary: "Source Code Pro", monospace;
+
+// Vairables
+$black: #111;
+$white: #fff;
+$ascent-color: #f46036;
+$border-color: #222;
+
+// CSS STYLING
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 10vh;
+
+    color: $white;
+    background-color: $black;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+        h1 {
+            color: $white;
+            font-weight: bolder;
+            font-family: $font-primary;
+            font-size: 3rem;
+        }
+    }
+
+    .nav-items {
+        font-family: $font-3;
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin: 0 10px;
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.hamburger {
+    font-size: 2rem;
+}
+
+.main {
+    height: 80vh;
+    padding: 0 2rem;
+    background-color: red;
+    background: rgb(131, 58, 180);
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .info {
+        width: 50%;
+        height: 50vh;
+        color: $white;
+        background-color: rgb(203, 180, 180);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .name {
+            font-size: 3rem;
+            font-family: $font-primary;
+            line-height: 1;
+            span {
+                color: $ascent-color;
+                text-shadow: 2px 0 0 $border-color, -2px 0 0 $border-color, 0 2px 0 $border-color,
+                    0 -2px 0 $border-color, 1px 1px $border-color, -1px -1px 0 $border-color, 1px -1px 0 $border-color,
+                    -1px 1px 0 $border-color;
+            }
+        }
+
+        .about {
+            margin-top: 1rem;
+            font-size: 2rem;
+            font-family: $font-primary;
+            line-height: 1;
+            letter-spacing: 3px;
+        }
+
+        .moreabout {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            font-family: $font-secondary;
+            line-height: 1;
+            letter-spacing: 0.4px;
+        }
+    }
+
+    .profile-img {
+        width: 50%;
+        height: 50vh;
+        background-color: rgb(86, 153, 177);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.footer {
+    height: 10vh;
+    background-color: $black;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: $white;
+        font-size: 3rem;
+
+        margin: 10px;
+    }
+}
+
+//media query
+@media only screen and (max-width:$screen-sm-max) {
+
+  .about{
+    flex-direction: column;
+
+    .profile-img{
+      margin-top ;
+
+    }
+  }
+  
+}
